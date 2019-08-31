@@ -52,8 +52,12 @@ class Song
         end
         artist_count_hash
     end 
-
-
+   
+    def test_method
+      p @@count
+      p @@artists
+      p @@genres
+    end
 
       
 
@@ -63,6 +67,7 @@ tk = Song.new("TakeshiAwesome","Takeshi","Rock")
 ek = Song.new("EtsukoGreat","Etsuko","Enka")
 sk = Song.new("SusumuIkiru","Susumu","Enka")
 ek.name
+ek.test_method
 
 
 binding.pry
