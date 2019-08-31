@@ -1,21 +1,22 @@
-
+require 'pry'
 class Song
 
-    attr_accessor :name, :artist, :genre
+    attr_reader :name, :artist, :genre
+
     @@count = 0
     @@artists = []
     @@genres = []
-
+    
     def initialize(name, artist, genre)
-        @name = name
-        @artist = artist
-        @genre = genre
-        @@count += 1 
-        @@genres << genre 
-        @@artists << artist
+    @@count += 1
+    @@genres << genre
+    @@artists << artist
+    @name = name
+    @artist = artist
+    @genre = genre
+    
     end
-
-
+    
     def self.count
         @@count
     end
@@ -29,27 +30,38 @@ class Song
     end
 
     def self.genre_count
-        genre_count_all_in_genres = {}
-        @@genres.each do |elgenre|
-            if genre_count_all_in_genres[elgenre]
-                genre_count_all_in_genres[elgenre] += 1
+        genre_count_hash = {}
+        @@genres.each do |genre| 
+            if genre_count_hash[genre]
+               genre_count_hash[genre] += 1
             else
-                genre_count_all_in_genres[elgenre] = 1
+               genre_count_hash[genre] = 1
             end
         end
-        genre_count_all_in_genres
+        genre_count_hash
     end 
-    
+
     def self.artist_count
-        artist_count_all_in_artists = {}
-        @@artists.each do |elart|
-            if artist_count_all_in_artists[elart]
-                artist_count_all_in_artists[elart] += 1
+        artist_count_hash = {}
+        @@artists.each do |artist| 
+            if artist_count_hash[artist]
+               artist_count_hash[artist] += 1
             else
-                artist_count_all_in_artists[elart] = 1
+               artist_count_hash[artist] = 1
             end
         end
-        artist_count_all_in_artists
-    end
+        artist_count_hash
+    end 
 
-end 
+
+
+      
+
+end
+
+tk = Song.new("TakeshiAwesome","Takeshi","Rock")
+ek = Song.new("EtsukoGreat","Etsuko","Enka")
+ek = Song.new("SusumuIkiru","Susumu","Enka")
+
+binding.pry
+"test"
