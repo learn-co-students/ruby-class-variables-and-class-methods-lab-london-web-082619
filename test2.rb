@@ -1,6 +1,9 @@
 class Song
-
+    
+    
+          
     attr_accessor :name, :artist, :genre
+    
 
     @@count = 0
     @@artists = []
@@ -16,7 +19,9 @@ class Song
     
     end
     
-
-      
-
 end
+ 
+takeshi = Song.new("TakeshiAwesome", "Tak", "Rock")
+p takeshi.name
+p takeshi.artist
+p takeshi.genre
