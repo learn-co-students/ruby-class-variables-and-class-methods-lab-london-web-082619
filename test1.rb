@@ -61,7 +61,9 @@ end
 
 tk = Song.new("TakeshiAwesome","Takeshi","Rock")
 ek = Song.new("EtsukoGreat","Etsuko","Enka")
-ek = Song.new("SusumuIkiru","Susumu","Enka")
+sk = Song.new("SusumuIkiru","Susumu","Enka")
+ek.name
+
 
 binding.pry
 "test"
