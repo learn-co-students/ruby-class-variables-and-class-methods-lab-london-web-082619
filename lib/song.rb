@@ -28,12 +28,9 @@ class Song
         @@genres.each do |song_style|
             if hsh.include?(song_style)
              hsh[song_style] += 1
-        
             #     binding.pry
             elsif 
                hsh[song_style] = 1
-           
-           
            end
         end
        hsh
@@ -43,6 +40,5 @@ class Song
             @@artists.collect {|key| result[key] += 1}
     result
 end
-
 end
  #binding.pry
