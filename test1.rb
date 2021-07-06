@@ -1,7 +1,7 @@
 require 'pry'
 class Song
 
-    attr_accessor :name, :artist, :genre
+    attr_reader :name, :artist, :genre
 
     @@count = 0
     @@artists = []
@@ -52,8 +52,12 @@ class Song
         end
         artist_count_hash
     end 
-
-
+   
+    def test_method
+      p @@count
+      p @@artists
+      p @@genres
+    end
 
       
 
@@ -61,7 +65,10 @@ end
 
 tk = Song.new("TakeshiAwesome","Takeshi","Rock")
 ek = Song.new("EtsukoGreat","Etsuko","Enka")
-ek = Song.new("SusumuIkiru","Susumu","Enka")
+sk = Song.new("SusumuIkiru","Susumu","Enka")
+ek.name
+ek.test_method
+
 
 binding.pry
 "test"
